@@ -20,26 +20,3 @@ window.onscroll = function(){
 };
 
 
-// rename docs
-const express = require("express");
-const app = express();
-const port = 3000;
-x
-app.use(express.static(__dirname + "/docs"));
-
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
-});
-
-app.get("/contact.html", (req, res) => {
-    res.sendFile(__dirname + "/contact.html");
-});
-
-app.get("/resume.html", (req, res) => {
-    res.sendFile(__dirname + "/resume.html");
-});
-
-app.listen(port, () => {
-    console.log('example app listening at http://localhost:port');
-});
-
